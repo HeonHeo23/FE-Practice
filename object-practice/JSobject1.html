@@ -23,9 +23,13 @@
     </script>
     <h2>Iterate</h2>
     <script>
-        for (var a in coworkers){
-            document.write(a+': '+coworkers[a]+'<br>');
-        }
+        coworkers.showAll = function(){
+            for (var a in this){
+                if (a != "showAll")
+                document.write(a+': '+this[a]+'<br>');
+            }
+        };
+        coworkers.showAll();
     </script>
 </body>
 </html>
