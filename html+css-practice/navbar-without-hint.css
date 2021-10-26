@@ -1,19 +1,106 @@
+*{box-sizing: border-box;margin:0;padding:0;font-family:'Zen Antique Soft',serif;list-style-type: none; }
+body {margin:0;text-align:center;padding:0;}
+a{color:inherit;text-decoration:inherit;}
+ul{
+    padding:0;
+}
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding:8px max(12px, 7.5vw);
 }
 .nav-contact{
-
-}
-.nav-menu{
     display:flex;
     flex-flow: row;
+    font-size: 24px;
+    color:white;
+}
+.nav-contact li{
+    padding: 8px 12px;
+}
+.nav-menu{
+    padding:0;
+    flex:1;
+    justify-content: space-between;
+}
+.nav-menu li{
+    padding:0;
+    width: 10vw;
+    color:white;
+    display: inline-block;
+}
+.nav-menu a{
+    transition: all 0.25s ease 0s;
+    display: block;
+    height: 100%;
+    padding: 12px 0;
+}
+.nav-menu a:hover{
+    background-color: tomato;
+    color:black;
+    border-radius: 4px;
 }
 .nav-logo{
+    display:block;
+    font-size:24px;
+    color: white;
+    width:max(15%,120px);
 }
-.nav-logo img{
-    width: 10%;
+.nav-logo svg{
+    color:tomato;
 }
-.logo{
-    display:inline;
+.nav-tog{
+    display:none;
+    position: absolute;
+    right:10px;
+    top:-2px;
+    color:tomato;
+    font-size: 24px;
+}
+#out{
+    display: inline-block;
+    transition: all 0.2s ease 0s;
+}
+.nav-logo:hover #out{
+    color:tomato;
+    font-size:27px;
+}
+@media screen and (max-width:768px) and (min-width:470px){
+    .nav{
+        flex-direction: column;
+        padding:0;
+    }
+    .nav-logo{
+        font-size: 15vw;
+        width:auto;
+    }
+    .nav-logo:hover #out{
+        color:tomato;
+        font-size: 15vw;
+    }
+    .nav-contact{
+        display: none;
+    }
+    .nav-menu{
+        width: 100%;
+        display: none;
+    }
+    .nav-menu li{
+        width: 100%;
+        padding:0 0;
+    }
+    .nav-tog{
+        display: block;
+    }
+    #out{
+        transition: all 0s;
+    }
+    .nav-contact.active{
+        display:flex;
+    }
+    .nav-menu.active{
+        display: block;
+    }
 }
