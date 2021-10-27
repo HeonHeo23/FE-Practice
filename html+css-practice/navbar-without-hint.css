@@ -17,8 +17,20 @@ ul{
     font-size: 24px;
     color:white;
 }
-.nav-contact li{
-    padding: 8px 12px;
+.nav-contact a{
+    transition: all 0.25s ease 0s;
+    padding: 0 12px;
+    justify-content: center;
+}
+.nav-contact svg{
+    transition: all 0.25s ease 0s;
+}
+.nav-contact a:hover li svg{
+    color:tomato;
+    font-size: 28px;
+}
+.nav-contact a:hover{
+    padding: 0 10.1px;
 }
 .nav-menu{
     padding:0;
@@ -28,25 +40,29 @@ ul{
 .nav-menu li{
     padding:0;
     width: 10vw;
+    padding: 0 0;
     color:white;
     display: inline-block;
 }
 .nav-menu a{
     transition: all 0.25s ease 0s;
     display: block;
-    height: 100%;
-    padding: 12px 0;
+    line-height: 48px;
 }
 .nav-menu a:hover{
     background-color: tomato;
     color:black;
     border-radius: 4px;
+    font-size: 20px;
 }
 .nav-logo{
-    display:block;
+    padding:8px 0;
     font-size:24px;
     color: white;
     width:max(15%,120px);
+}
+.nav-logo a{
+    padding: 0;
 }
 .nav-logo svg{
     color:tomato;
@@ -65,16 +81,24 @@ ul{
 }
 .nav-logo:hover #out{
     color:tomato;
-    font-size:27px;
+
 }
-@media screen and (max-width:768px) and (min-width:470px){
+@media screen and (max-width:768px){
     .nav{
         flex-direction: column;
         padding:0;
     }
     .nav-logo{
+        display:flex;
+        padding:0;
         font-size: 15vw;
         width:auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-logo a{
+        display: inline-block;
+        line-height: 20vw;
     }
     .nav-logo:hover #out{
         color:tomato;
