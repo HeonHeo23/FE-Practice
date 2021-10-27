@@ -1,4 +1,4 @@
-*{box-sizing: border-box;margin:0;padding:0;font-family:'Zen Antique Soft',serif;list-style-type: none; }
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Zen Antique Soft',serif;list-style-type: none; }
 body {margin:0;text-align:center;padding:0;}
 a{color:inherit;text-decoration:inherit;}
 ul{
@@ -40,7 +40,6 @@ ul{
 .nav-menu li{
     padding:0;
     width: 10vw;
-    padding: 0 0;
     color:white;
     display: inline-block;
 }
