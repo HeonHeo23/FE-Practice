@@ -1,0 +1,127 @@
+*{margin:0;padding:0;list-style-type:none;}
+a{color:inherit;text-decoration:inherit;}
+body{overflow-x: hidden;}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+    font-size: 22px;
+    padding: 8px 12px;
+}
+.nav-logo i{
+    color:red;
+}
+.player iframe{
+    width:100vw;
+    height:56.25vw;
+}
+.infodata{
+    display: flex;
+    flex-flow: row;
+    justify-content:space-evenly;
+}
+.info{
+    padding: 8px 12px;
+    flex:1;
+}
+.info-data{
+    
+}
+.info-data-tag{
+    font-size:12px;
+    color:rgb(57, 88, 190);
+    margin-bottom:4px;
+}
+.info-data-title{
+    margin-bottom:2px;
+    display: flex;
+}
+.info-data-title-but i.inactive{
+    display: none;
+}
+.info-data-title-but i.active{
+    display: inline;
+}
+.info-data-data{
+    font-size:12px;
+    color:gray;
+}
+.info-but{
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+    padding: 8px 12px;
+}
+.info-but li i{
+    display:block;
+    margin-bottom: 8px;
+}
+.info-chan{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:4px 0;
+}
+.info-chan-chan{
+    display:flex;
+    align-items: center;
+}
+.info-chan-chan-img{
+    display: flex;
+    align-items: center;
+    height:100%;
+    margin-right:8px;
+}
+.info-chan-chan-img img{
+    border-radius: 50%;
+}
+.info-chan-chan-text-sub{
+    font-size: 12px;
+    color:grey;
+}
+.info-chan-but{
+    font-weight: bold;
+}
+.rec{
+    padding:8px 12px;
+    flex:1;
+}
+.rec-text{
+    color:#666;
+    margin-bottom: 8px;
+}
+.rec-list{
+
+}
+.rec-list-vid{
+    display:flex;
+    margin-bottom:8px;
+}
+.rec-list-vid-thumb{
+    width:168px;
+    height:94px;
+    margin-right:8px;
+}
+.rec-list-vid-thumb img{
+    width:168px;
+    height:94px;
+}
+.rec-list-vid-info{
+    flex:1;
+    margin-right:8px;
+}
+.rec-list-vid-info-chan, .rec-list-vid-info-view{
+    font-size: 14px;
+    color:grey;
+}
+.rec-list-vid-but{
+    
+}
+@media screen and (max-width:768px) {
+    .infodata{
+        flex-flow: column;
+    }
+}
