@@ -37,6 +37,15 @@ body{overflow-x: hidden;}
     margin-bottom:2px;
     display: flex;
 }
+.info-data-title-text{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+.info-data-title-text.open{
+    display: inline;
+}
 .info-data-title-but i.inactive{
     display: none;
 }
@@ -112,6 +121,12 @@ body{overflow-x: hidden;}
 .rec-list-vid-info{
     flex:1;
     margin-right:8px;
+}
+.rec-list-vid-info-title{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .rec-list-vid-info-chan, .rec-list-vid-info-view{
     font-size: 14px;
