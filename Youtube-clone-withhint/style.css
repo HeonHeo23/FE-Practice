@@ -1,0 +1,222 @@
+:root{
+    /*Color*/
+    --white-color:#FFF;
+    --black-color:#140A00;
+    --blue-color:#045FD4;
+    --red-color:#F00;
+    --grey-dark-color:#909090;
+    --grey-light-color:#E0E0E0;
+
+    /*Size*/
+    --padding:12px;
+    --profile-size:36px;
+
+    /*Font Size*/
+    --font-title:20px;
+    --font-large:18px;
+    --font-medium:14px;
+    --font-small:12px;
+    --font-tiny:10px;
+    --font-btn:16px;
+}
+*{margin:0;padding:0;list-style-type:none;box-sizing: border-box;}
+body{font-family:Roboto;}
+button,button:focus{border:none;cursor:pointer;outline:none;background-color:inherit;}
+
+/*header*/
+header{
+    display:flex;
+    justify-content:space-between;
+    background-color:#252525;
+    padding:var(--padding);
+    color:var(--white-color);
+    font-size: var(--font-title);
+}
+header .logo i{
+    color: var(--red-color);
+}
+header .menu i{
+    margin-left: var(--padding);
+}
+
+/*player*/
+.player{
+    text-align: center;
+    background-color:black;
+    height:min(56.25vw,576px);
+    position:sticky;
+    top:0;
+}
+.player iframe{
+    width:min(100vw,1024px);
+    height:min(56.25vw,576px);
+}
+
+.inforec{
+    display:flex;
+    flex-flow:row;
+}
+
+/*info*/
+.info{
+    background-color:var(--white-color);
+    padding:var(--padding);
+    flex:1;
+}
+.hashtags{
+    display: flex;
+    color:var(--blue-color);
+    font-size: var(--font-small);
+}
+.hashtags li{
+    margin-right:var(--padding);
+}
+.title{
+    display:flex;
+}
+.title-text{
+    font-size:var(--font-large);
+}
+.clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.title-btn{
+    margin-left:var(--padding);
+    height:100%;
+    transition: transform 300ms ease-in-out;
+}
+.clicked{
+    transform: rotate(180deg);
+}
+.views{
+    font-size:var(--font-medium);
+    color:var(--grey-dark-color);
+}
+.buttons{
+    display:flex;
+    justify-content:space-around;
+    padding:var(--padding) 0;
+}
+.buttons li{
+    display:flex;
+    flex-flow:column;
+}
+.buttons li button{
+    color:var(--grey-dark-color);
+    width:36px;
+    border-radius:50%;
+}
+.buttons li button:active{
+    transition: all 0.2s;
+    background-color:var(--grey-light-color);
+}
+.buttons li i{
+    transition: all 0.15s ease-in-out;
+    padding-bottom:calc(var(--padding)/2);
+    font-size:var(--font-btn);
+}
+.buttons li i.active{
+    color:var(--blue-color)
+}
+.buttons span{
+    display: block;
+    font-size:var(--font-small);
+}
+.channel{
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid var(--grey-light-color);
+    border-bottom:1px solid var(--grey-light-color);
+}
+.channel-data{
+    display:flex;
+    align-items:center;
+}
+.channel-img{
+    margin:calc(var(--padding)/2) calc(var(--padding)/2) calc(var(--padding)/2) 0;
+    display: flex;
+    align-items: center;
+}
+.channel-img img{
+    border-radius:50%;
+    width:var(--profile-size);
+    height:var(--profile-size);
+}
+.channel-info{
+    display:flex;
+    flex-flow:column;
+}
+.channel-info span.name{
+    font-size:var(--font-medium);
+}
+.channel-info span.subscribers{
+    font-size:var(--font-small);
+    color:var(--grey-dark-color);
+}
+.channel button{
+    text-transform:uppercase;
+    color: var(--red-color);
+    font-weight:bold;
+    font-size:var(--font-medium);
+}
+
+/*rec*/
+.rec{
+    padding: var(--padding) 0;
+    flex:1;
+}
+.upnext{
+    display: block;
+    color:var(--grey-dark-color);
+    font-size:var(--font-medium);
+}
+.item {
+    display:flex;
+    margin-top:var(--padding);
+}
+.thumb{
+    flex:1 1 35%;
+    margin-right:var(--padding);
+}
+.thumb img{
+    width:100%;
+    height:100%;
+}
+.upnext-info{
+    display:flex;
+    flex-flow:column;
+    flex:1 1 60%;
+}
+.upnext-title{
+    font-size:var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.upnext-chan, .upnext-views{
+    font-size:var(--font-small);
+    color:var(--grey-dark-color);
+}
+.upnext-btn{
+    flex:1 1 5%;
+    height: 100%;
+    font-size:var(--font-tiny);
+}
+
+@media screen and (max-width:1024px) {
+    header{
+        background-color:var(--black-color);
+    }
+}
+@media screen and (max-width:768px){
+    .inforec{
+        flex-flow:column;
+    }
+    .rec{
+        padding: 0 var(--padding);
+    }
+}
